@@ -1,0 +1,146 @@
+:root {
+    /*Primary colors*/
+    --veryDarkBlue: hsl(233, 47%, 7%);
+    --darkDesaturatedBlue: hsl(244, 38%, 16%);
+    --softViolet: hsl(277, 64%, 61%);
+    /*Neutral*/
+    --white: hsl(0, 0%, 100%);
+    --slightlyTransparentWhiteMainParagraph: hsla(0, 0%, 100%, 0.75);
+    --slightyTansparentWhiteStatHeadings: hsla(0, 0%, 100%, 0.6);
+    --font-size: 15px;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url("./fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('./fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf');
+}
+
+body{
+    margin: 0;
+    font-family: 'Lexend Deca';
+    color: var(--white);
+    background-color: var(--veryDarkBlue);
+    font-size: var(--font-size);
+    font-weight: 400;
+    width: 100svw;
+    min-height: 100svh;
+    container: body / inline-size;
+}
+
+main {
+    display: grid;
+    width: 100cqw;
+    height: 100cqh;
+    place-items: center;
+}
+
+section[class="card-container"] {
+    display: grid;
+    width: 70dvw;
+    height: 50dvh;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+section[class="card-info-container"] {
+    display: grid;
+    background-color: var(--darkDesaturatedBlue);
+    width: 100%;
+    height: 100%;
+    place-items: center;
+}
+
+section[class="card-info"] {
+    display: grid;
+    width: 80%;
+    height: 80%;
+    align-content: space-around;
+}
+
+span[class="insights"] {
+    color: var(--softViolet);
+}
+
+section[class="card-info-main"] {
+    display: grid;
+    gap: 10%;
+}
+
+section[class="card-info-header"] {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--white);
+    font-family: 'Inter';
+}
+
+section[class="card-info-text"] {
+    color: var(--slightlyTransparentWhiteMainParagraph);
+}
+
+section[class="card-info-stats"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: 'Inter';
+}
+
+section[ class="card-info-bit-number"] {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+section[ class="card-info-bit-text"] {
+    color: var(--slightyTansparentWhiteStatHeadings);
+    text-transform: uppercase;
+}
+
+section[class="image-container"] {
+    background-color: var(--softViolet);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+div[class="attribution"]{
+    position: absolute;
+    bottom: 5px;
+    left:0;
+    right: 0;
+    margin:0 auto;
+}
+@container (inline-size < 1000px) {
+    section[class="card-container"] {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100dvw;
+        height: 100dvh;
+    }
+    section[class="card-info"] {
+        align-content: space-evenly;
+        align-self: baseline;
+    }
+    section[class="card-info-stats"] {
+        grid-template-columns: 1fr;
+        place-items: center;
+        text-align: center;
+        gap: 10%;
+    }
+
+    section[class="image-container"] {
+        height: 30dvh;
+    }
+    section[ class="card-info-bit"] {
+        display: grid;
+        gap: 10px;
+    }
+    section[class="card-info-text"],
+    section[class="card-info-header"]{
+        text-align: center;
+    }
+}
