@@ -1,5 +1,5 @@
 # Frontend Mentor - Stats preview card component
-[Solution](https://maudepod.github.io/time-tracking-dashboard-main-html/).
+[View Solution](https://maudepod.github.io/time-tracking-dashboard-main-html/).
 
 ![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)
 
